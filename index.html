@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tax calculator</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div id="calculator">
+		<div id="calc-hide">
+			<div class="warn-icon">
+				<p>
+					Enter gross annual income
+					<i class="bi bi-question-circle tooltip"><span class="tooltiptext">Gross annual income is your total
+							sallary in a year before any deduction</span></i>
+
+					<i id="warn-annual" class="bi bi-exclamation-circle tool"><span class="tooltext">Please enter
+							numbers only</span></i>
+				</p>
+				<input id="gross" type="text" placeholder="Enter gross annual income " />
+			</div>
+			<div class="warn-icon">
+				<p>
+					Enter extra income
+					<i class="bi bi-question-circle tooltip"><span class="tooltiptext">money you earn in addition to
+							your regular work</span></i>
+
+					<i id="warn-extra" class="bi bi-exclamation-circle tool"><span class="tooltext">Please enter numbers
+							only</span></i>
+				</p>
+				<input id="extra" type="text" placeholder="Enter extra income from other sources" />
+			</div>
+			<div class="warn-icon">
+				<p>
+					Enter age group
+					<i class="bi bi-question-circle tooltip"><span class="tooltiptext">Tax differs based on the age
+							groups</span></i>
+
+					<i id="warn-age" class="bi bi-exclamation-circle tool"><span class="tooltext">Please select the age
+							group</span></i>
+				</p>
+				<select id="ages">
+					<option value=""></option>
+					<option value="30">age < 40</option>
+					<option value="40">age ≥ 40 but < 60</option>
+					<option value="10">age ≥ 60</option>
+				</select>
+			</div>
+			<div class="warn-icon">
+				<p>
+					Enter total applicable deduction
+					<i class="bi bi-question-circle tooltip"><span class="tooltiptext">The expenses which are spend for
+							generate the income</span></i>
+
+
+					<i id="warn-deduction" class="bi bi-exclamation-circle tool"><span class="tooltext">Please enter
+							numbers only</span></i>
+				</p>
+				<input id="deduction" type="text" placeholder="Enter total applicable deduction" />
+			</div>
+
+			<div><button id="submit">Submit</button></div>
+		</div>
+		<div class="popup" id="popup">
+			<h2>Your Overall income will be</h3>
+				<h3 id="income">120000</h4>
+					<h4 id="no_tax">after tax deductions</h5>
+						<button type="button">close</button>
+		</div>
+
+	</div>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>
