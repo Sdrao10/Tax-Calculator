@@ -25,5 +25,10 @@ References & Requirements.
 - Error icons should not be visible in the form by default.
 - Clicking on submit should show a modal which would show the final values based on above calculations.
 
+**when Income is Under 8lakh**
 
+input
+![1](https://github.com/Sdrao10/Tax-Calculator/assets/125265386/2cee6c3d-77e9-4599-a0fb-1ccb2fa8c09b)
+output
+![2](https://github.com/Sdrao10/Tax-Calculator/assets/125265386/cdcd27d4-a41b-4dfd-a511-c4977f711932)
 
