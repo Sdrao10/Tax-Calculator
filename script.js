@@ -1,11 +1,21 @@
 function gross_income() {
 	let gross = document.getElementById("gross").value;
 	const gross_in = parseInt(gross);
-	if (isNaN(gross_in)) {
-		let popup = document.getElementById("warn-annual");
+	let popup = document.getElementById("warn-annual");
+	if(gross==""){
+		document.getElementsByClassName("tooltext")[0].innerHTML="input field is mandatory";
+		
+		popup.classList.add("wrong-value");
+		return;
+	}
+
+	else if (isNaN(gross_in)) {
+		document.getElementsByClassName("tooltext")[0].innerHTML="Please enter numbers only";
+		
 		popup.classList.add("wrong-value");
 		return;
 	} else {
+		popup.classList.remove("wrong-value");
 		return gross_in;
 	}
 }
@@ -13,25 +23,35 @@ function gross_income() {
 function extra_income() {
 	const extra = document.getElementById("extra").value;
 	const extra_in = parseInt(extra);
-
-	if (isNaN(extra_in)) {
-		let popup = document.getElementById("warn-extra");
+	let popup = document.getElementById("warn-extra");
+	if(extra==""){
+		document.getElementsByClassName("tooltext")[1].innerHTML="Input field is mandatory";
+		
+		popup.classList.add("wrong-value");
+		return;
+	}
+	
+	else if (isNaN(extra_in)) {
+		document.getElementsByClassName("tooltext")[1].innerHTML="Please enter numbers only";
+		
 		popup.classList.add("wrong-value");
 		return calculator;
 	} else {
+		popup.classList.remove("wrong-value");
 		return extra_in;
 	}
 }
 
 function percentage_by_age_group() {
 	var per = document.getElementById("ages").value;
-
+	let popup = document.getElementById("warn-age");
 	const percentage = parseInt(per);
 	if (isNaN(percentage)) {
-		let popup = document.getElementById("warn-age");
+		
 		popup.classList.add("wrong-value");
 		return;
 	} else {
+		popup.classList.remove("wrong-value");
 		return percentage / 100;
 	}
 }
@@ -39,11 +59,19 @@ function percentage_by_age_group() {
 function total_deduction() {
 	const dedctn = document.getElementById("deduction").value;
 	const deduction = parseInt(dedctn);
-	if (isNaN(deduction)) {
-		let popup = document.getElementById("warn-deduction");
+	let popup = document.getElementById("warn-deduction");
+	if(dedctn==""){
+		document.getElementsByClassName("tooltext")[3].innerHTML="Input field is mandatory";
+		
+		popup.classList.add("wrong-value");
+	}
+	else if (isNaN(deduction)) {
+		document.getElementsByClassName("tooltext")[3].innerHTML="Please enter numbers only";
+		
 		popup.classList.add("wrong-value");
 		return;
 	} else {
+		popup.classList.remove("wrong-value");
 		return deduction;
 	}
 }
