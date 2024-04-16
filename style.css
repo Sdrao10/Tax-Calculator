@@ -39,6 +39,11 @@ button {
 	bottom: 38px;
 	color: #ffffff;
 	background-color: rgb(104, 104, 237);
+	cursor: pointer;
+}
+
+#gross,#extra,#deduction{
+	cursor: text;
 }
 
 #calculator input {
@@ -68,6 +73,7 @@ button {
 	border: 2px solid #cdd0cd;
 	border-radius: 4px;
 }
+
 
 .tooltip {
 	position: relative;
