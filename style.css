@@ -42,9 +42,7 @@ button {
 	cursor: pointer;
 }
 
-#gross,#extra,#deduction{
-	cursor: text;
-}
+
 
 #calculator input {
 	margin-bottom: 8px;
@@ -53,6 +51,7 @@ button {
 	border-radius: 4px;
 	border: 2px solid #cdd0cd;
 	padding: 7px;
+	cursor: text;
 }
 ::placeholder {
 	opacity: 0.6;
@@ -72,6 +71,7 @@ button {
 	width: 100%;
 	border: 2px solid #cdd0cd;
 	border-radius: 4px;
+	cursor: pointer;
 }
 
 
