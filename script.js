@@ -3,7 +3,7 @@ function gross_income() {
 	const gross_in = parseInt(gross);
 	let popup = document.getElementById("warn-annual");
 	if(gross==""){
-		document.getElementsByClassName("tooltext")[0].innerHTML="input field is mandatory";
+		document.getElementsByClassName("tooltext")[0].innerHTML="Input field is mandatory";
 		
 		popup.classList.add("wrong-value");
 		return;
